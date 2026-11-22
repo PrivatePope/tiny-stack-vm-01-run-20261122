@@ -18,9 +18,9 @@ else{let l=s.length;if(l<"11223"[k-3])return 2;k==3?Q():P(k%2?s.splice(l-(k-1)/2
 if(!s.length)return 2
 P(k-23?~Q():-Q()|0)
 }else if(k>47&&k<53){
-if(k>50){if(k==51){r.push(pc);pc=v}else{if(!r.length)return 8;pc=r.pop()}}
+if(k>50){if(k==51)r.push(pc),pc=v;else{if(!r.length)return 8;pc=r.pop()}}
 else{v=v<<16>>16;if(k==48)pc+=v;else{if(!s.length)return 2;if(!Q()==(k<50))pc+=v}}
-}else if(k==64||k==65){
+}else if(k>63&&k<66){
 if(s.length<k-63)return 2
 a=Q()
 if(a>>>0>255)return 6
